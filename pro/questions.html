@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questions Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <script type="application/json" id="quizData">
+    {
+      "categories": [
+        {
+          "name": "General Knowledge",
+          "questions": [
+            {
+              "question": "Who wrote 'To Kill a Mockingbird'?",
+              "options": ["Harper Lee", "George Orwell", "Jane Austen", "F. Scott Fitzgerald"],
+              "answer": "Harper Lee"
+            },
+            {
+              "question": "Who painted the Mona Lisa?",
+              "options": ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Claude Monet"],
+              "answer": "Leonardo da Vinci"
+            },
+            {
+              "question": "In which year did the Titanic sink?",
+              "options": ["1912", "1920", "1905", "1931"],
+              "answer": "1912"
+            }
+          ]
+        },
+        {
+          "name": "Science",
+          "questions": [
+            {
+              "question": "Who discovered penicillin?",
+              "options": ["Alexander Fleming", "Marie Curie", "Louis Pasteur", "Joseph Lister"],
+              "answer": "Alexander Fleming"
+            },
+            {
+              "question": "What is the chemical symbol for gold?",
+              "options": ["Au", "Ag", "Fe", "Cu"],
+              "answer": "Au"
+            },
+            {
+              "question": "Who is known as the father of modern physics?",
+              "options": ["Albert Einstein", "Isaac Newton", "Niels Bohr", "Galileo Galilei"],
+              "answer": "Albert Einstein"
+            }
+          ]
+        },
+        {
+          "name": "Mathematics",
+          "questions": [
+            {
+              "question": "What is the value of pi (π)?",
+              "options": ["3.14", "2.71", "1.618", "4.20"],
+              "answer": "3.14"
+            },
+            {
+              "question": "What is the Pythagorean theorem?",
+              "options": [
+                "a² + b² = c²",
+                "E = mc²",
+                "F = ma",
+                "sin²θ + cos²θ = 1"
+              ],
+              "answer": "a² + b² = c²"
+            },
+            {
+              "question": "Who is known for the development of calculus?",
+              "options": ["Isaac Newton", "Leonhard Euler", "Euclid", "Pythagoras"],
+              "answer": "Isaac Newton"
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+
+  <div id="app" class="container">
+    <!-- Question and Options will be dynamically inserted by scripts.js -->
+  </div>
+
+  <input type="button" value="< Previous" class="left" onclick="navigate('previous')">
+  <input type="button" value="Next >" class="rightone" onclick="navigate('next')">
+  <input type="button" value="Skip >" class="rightone" onclick="navigate('skip')">
+
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
